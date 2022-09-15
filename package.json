@@ -1,0 +1,51 @@
+{
+  "name": "lead-qa-interview",
+  "version": "0.1.0",
+  "author": "Biobot Analytics",
+  "homepage": "https://biobotanalytics.github.io/lead-qa-interview/",
+  "dependencies": {
+    "@emotion/react": "^11.7.1",
+    "@emotion/styled": "^11.6.0",
+    "@mui/icons-material": "^5.3.1",
+    "@mui/material": "^5.3.0",
+    "@testing-library/jest-dom": "^5.16.1",
+    "@testing-library/react": "^12.1.2",
+    "@testing-library/user-event": "^13.5.0",
+    "axios": "^0.25.0",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "react-toastify": "^8.1.0",
+    "toastr": "^2.1.4",
+    "web-vitals": "^2.1.4"
+  },
+  "devDependencies": {
+    "npm-run-all": "^4.1.5",
+    "react-scripts": "^3.0.1",
+    "ttab": "^0.7.2"
+  },
+  "scripts": {
+    "start": "run-s tab:frontend tab:backend",
+    "frontend": "react-scripts start",
+    "backend": "npx json-server -p 4000 --watch src/data/KITS_SHIPPING_DATA.json --no-cors",
+    "tab:frontend": "ttab -t 'Run Frontend' npm run frontend",
+    "tab:backend": "ttab -t 'Run Backend' npm run backend",
+    "build": "react-scripts build"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
+}
